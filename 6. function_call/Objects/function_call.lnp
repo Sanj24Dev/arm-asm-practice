@@ -1,0 +1,6 @@
+--cpu=Cortex-M4.fp.sp
+".\objects\function_call.o"
+--strict --scatter ".\Objects\function_call.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\function_call.map" -o .\Objects\function_call.axf

@@ -1,0 +1,7 @@
+--cpu=Cortex-M4.fp.sp
+".\objects\print_using_svc.o"
+".\objects\retarget_io.o"
+--strict --scatter ".\Objects\print_using_SVC.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\print_using_SVC.map" -o .\Objects\print_using_SVC.axf

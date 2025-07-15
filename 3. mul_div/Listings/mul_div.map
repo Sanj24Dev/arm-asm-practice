@@ -1,0 +1,98 @@
+Component: Arm Compiler for Embedded 6.23 Tool: armlink [5f102400]
+
+==============================================================================
+
+Section Cross References
+
+    mul_div.o(RESET) refers to mul_div.o(.text) for Reset_Handler
+    mul_div.o(.text) refers to mul_div.o(.data) for num1
+
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    mul_div.asm                              0x00000000   Number         0  mul_div.o ABSOLUTE
+    RESET                                    0x08000000   Section        8  mul_div.o(RESET)
+    $v0                                      0x08000008   Number         0  mul_div.o(.text)
+    .text                                    0x08000008   Section       44  mul_div.o(.text)
+    num1                                     0x20000000   Data           4  mul_div.o(.data)
+    .data                                    0x20000000   Section       16  mul_div.o(.data)
+    num2                                     0x20000004   Data           4  mul_div.o(.data)
+    num3                                     0x20000008   Data           4  mul_div.o(.data)
+    res                                      0x2000000c   Data           4  mul_div.o(.data)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$~IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$STANDARDLIB$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __Vectors                                0x08000000   Data           0  mul_div.o(RESET)
+    Reset_Handler                            0x08000009   Thumb Code     0  mul_div.o(.text)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image entry point : Not specified.
+
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00000044, Max: 0x00100000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000034, Max: 0x00100000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x00000008   Code   RO            1    RESET               mul_div.o
+    0x08000008   0x08000008   0x0000002c   Code   RO            2    .text               mul_div.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08000034, Size: 0x00000010, Max: 0x00020000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x08000034   0x00000010   Data   RW            3    .data               mul_div.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+        52         24          0         16          0        408   mul_div.o
+
+    ----------------------------------------------------------------------
+        52         24          0         16          0        408   Object Totals
+         0          0          0          0          0          0   (incl. Generated)
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+         0          0          0          0          0          0   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+        52         24          0         16          0        408   Grand Totals
+        52         24          0         16          0        408   ELF Image Totals
+        52         24          0         16          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                   52 (   0.05kB)
+    Total RW  Size (RW Data + ZI Data)                16 (   0.02kB)
+    Total ROM Size (Code + RO Data + RW Data)         68 (   0.07kB)
+
+==============================================================================
+

@@ -1,0 +1,78 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<title>Static Call Graph - [.\Objects\print_using_ITM.axf]</title></head>
+<body><HR>
+<H1>Static Call Graph for image .\Objects\print_using_ITM.axf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6230001: Last Updated: Mon Jun 23 23:03:40 2025
+<BR><P>
+<H3>Maximum Stack Usage =          4 bytes + Unknown(Functions without stacksize, Untraceable Function Pointers)</H3><H3>
+Call chain for Maximum Stack Depth:</H3>
+Reset_Handler &rArr; ITM_SendChar
+<P>
+<H3>
+Functions with no stack information
+</H3><UL>
+ <LI><a href="#[0]">Reset_Handler</a>
+</UL>
+</UL>
+<P>
+<H3>
+Function Pointers
+</H3><UL>
+ <LI><a href="#[0]">Reset_Handler</a> from print_using_itm.o(.text) referenced from print_using_itm.o(RESET)
+</UL>
+<P>
+<H3>
+Global Symbols
+</H3>
+<P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, print_using_itm.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4 + Unknown Stack Size
+<LI>Call Chain = Reset_Handler &rArr; ITM_SendChar
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ITM_SendChar
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> print_using_itm.o(RESET)
+</UL>
+<P><STRONG><a name="[3]"></a>strcmp</STRONG> (Thumb, 124 bytes, Stack size 8 bytes, strcmpv7em.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_open
+</UL>
+
+<P><STRONG><a name="[6]"></a>ITM_ReceiveChar</STRONG> (Thumb, 62 bytes, Stack size 4 bytes, retarget_io.o(.text.ITM_ReceiveChar), UNUSED)
+
+<P><STRONG><a name="[1]"></a>ITM_SendChar</STRONG> (Thumb, 66 bytes, Stack size 4 bytes, retarget_io.o(.text.ITM_SendChar))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = ITM_SendChar
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stdout_putchar
+<LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_Handler
+</UL>
+
+<P><STRONG><a name="[7]"></a>_sys_close</STRONG> (Thumb, 74 bytes, Stack size 12 bytes, retarget_io.o(.text._sys_close), UNUSED)
+
+<P><STRONG><a name="[8]"></a>_sys_flen</STRONG> (Thumb, 72 bytes, Stack size 12 bytes, retarget_io.o(.text._sys_flen), UNUSED)
+
+<P><STRONG><a name="[9]"></a>_sys_istty</STRONG> (Thumb, 72 bytes, Stack size 12 bytes, retarget_io.o(.text._sys_istty), UNUSED)
+
+<P><STRONG><a name="[2]"></a>_sys_open</STRONG> (Thumb, 132 bytes, Stack size 24 bytes, retarget_io.o(.text._sys_open), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
+</UL>
+
+<P><STRONG><a name="[a]"></a>_sys_read</STRONG> (Thumb, 88 bytes, Stack size 24 bytes, retarget_io.o(.text._sys_read), UNUSED)
+
+<P><STRONG><a name="[b]"></a>_sys_seek</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, retarget_io.o(.text._sys_seek), UNUSED)
+
+<P><STRONG><a name="[4]"></a>_sys_write</STRONG> (Thumb, 118 bytes, Stack size 40 bytes, retarget_io.o(.text._sys_write), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stdout_putchar
+</UL>
+<P>
+<H3>
+Local Symbols
+</H3>
+<P><STRONG><a name="[5]"></a>stdout_putchar</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, retarget_io.o(.text.stdout_putchar), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ITM_SendChar
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_write
+</UL>
+<P>
+<H3>
+Undefined Global Symbols
+</H3><HR></body></html>
