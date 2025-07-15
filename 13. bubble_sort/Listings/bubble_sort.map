@@ -1,0 +1,96 @@
+Component: Arm Compiler for Embedded 6.23 Tool: armlink [5f102400]
+
+==============================================================================
+
+Section Cross References
+
+    bubble_sort.o(RESET) refers to bubble_sort.o(.text) for Reset_Handler
+    bubble_sort.o(.text) refers to bubble_sort.o(.data) for n
+
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    bubble_sort.asm                          0x00000000   Number         0  bubble_sort.o ABSOLUTE
+    RESET                                    0x08000000   Section        8  bubble_sort.o(RESET)
+    $v0                                      0x08000008   Number         0  bubble_sort.o(.text)
+    .text                                    0x08000008   Section       68  bubble_sort.o(.text)
+    n                                        0x20000000   Data           4  bubble_sort.o(.data)
+    .data                                    0x20000000   Section       24  bubble_sort.o(.data)
+    arr                                      0x20000004   Data          20  bubble_sort.o(.data)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$~IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$STANDARDLIB$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __Vectors                                0x08000000   Data           0  bubble_sort.o(RESET)
+    Reset_Handler                            0x08000009   Thumb Code     0  bubble_sort.o(.text)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image entry point : Not specified.
+
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00000064, Max: 0x00100000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0000004c, Max: 0x00100000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x00000008   Code   RO            1    RESET               bubble_sort.o
+    0x08000008   0x08000008   0x00000044   Code   RO            3    .text               bubble_sort.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0800004c, Size: 0x00000018, Max: 0x00020000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x0800004c   0x00000018   Data   RW            2    .data               bubble_sort.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+        76         18          0         24          0        440   bubble_sort.o
+
+    ----------------------------------------------------------------------
+        76         18          0         24          0        440   Object Totals
+         0          0          0          0          0          0   (incl. Generated)
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+         0          0          0          0          0          0   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+        76         18          0         24          0        440   Grand Totals
+        76         18          0         24          0        440   ELF Image Totals
+        76         18          0         24          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                   76 (   0.07kB)
+    Total RW  Size (RW Data + ZI Data)                24 (   0.02kB)
+    Total ROM Size (Code + RO Data + RW Data)        100 (   0.10kB)
+
+==============================================================================
+
